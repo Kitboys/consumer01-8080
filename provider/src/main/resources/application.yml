@@ -1,0 +1,45 @@
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: provider-depart
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding-UTF-8&serverTimezone=GMT%2B8
+    data-username: root
+    data-password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  pattern:
+    console: level-%level %msg%n
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.BasicExtractor: trace
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: provider-8081-temp
+
+
+info:
+  auth: tom
+  app.name: abcmsc
+  app.desc: This is a msc of ADB Company
+  company.name: www.abb.com
+  company.addr: Beijing China
