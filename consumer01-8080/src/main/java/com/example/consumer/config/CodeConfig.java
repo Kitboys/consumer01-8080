@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class CodeConfig {
     //开启消费者客户端的负载均衡功能
-    @LoadBalanced
+    //@LoadBalanced
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
