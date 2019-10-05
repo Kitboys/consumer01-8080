@@ -28,6 +28,13 @@ public class DepartController {
     public Depart getDepartHandle(@PathVariable("id") int id) {
 //        String url = SERVICDE_PROVIDER + "/get/" + id;
 //        return restTemplate.getForObject(url, Depart.class);
-        return departService.getDepartById(id);
+        Depart departById = departService.getDepartById(id);
+        System.out.println(departById);
+        return departById;
+    }
+
+    @RequestMapping("test")
+    public String test(){
+        return "test String";
     }
 }

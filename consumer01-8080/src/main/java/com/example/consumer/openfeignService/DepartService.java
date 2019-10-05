@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Service
-@FeignClient("provider-8081-temp")
+@FeignClient("provider-depart")
 @RequestMapping("/provider/depart")
 public interface DepartService {
     @RequestMapping("/get/{id}")
     Depart getDepartById(@PathVariable("id") int id);
+
 }
