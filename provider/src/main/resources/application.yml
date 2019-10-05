@@ -1,4 +1,3 @@
-
 server:
   port: 8081
 
@@ -27,15 +26,12 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
     org.hibernate.type.descriptor.BasicExtractor: trace
 
-
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka
   instance:
     instance-id: provider-8081-temp
-
 
 info:
   auth: tom
