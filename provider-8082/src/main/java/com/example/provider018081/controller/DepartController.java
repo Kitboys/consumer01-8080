@@ -33,7 +33,11 @@ public class DepartController {
 
     @GetMapping("/get/{id}")
     public Depart getDepartHandle(@PathVariable("id") int id) {
-        return departService.getDepartById(id);
+        Depart depart = departService.getDepartById(id);
+        if (depart != null) {
+            depart.setDbase("test2");
+        }
+        return depart;
     }
 
     @GetMapping("/list")
