@@ -47,9 +47,10 @@ public class DepartServiceImpl implements DepartService {
         if (departRepository.existsById(id)) {
             return departRepository.getOne(id);
         }
-        Depart depart = new Depart();
-        depart.setName("no this depart");
-        return depart;
+//        Depart depart = new Depart();
+//        depart.setName("no this depart");
+//        return depart;
+        return null;
     }
 
     @Override

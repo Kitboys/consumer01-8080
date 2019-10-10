@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: provider-depart
+    name: provider-depart1
   jpa:
     generate-ddl: true
     show-sql: true
@@ -31,7 +31,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8000/eureka
   instance:
-    instance-id: provider-8081-temp
+    instance-id: provider-8081
 
 info:
   auth: tom
