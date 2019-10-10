@@ -1,0 +1,26 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: consumner-depart
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: consumer-8085
+# 开启 Feign 对 Hystrix 的支持
+feign:
+  hystrix:
+    enabled: true
+
+# 设置服务熔断时限，默认为 1000 毫秒
+# 设置服务熔断时限，默认为 1000 毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
