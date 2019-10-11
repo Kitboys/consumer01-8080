@@ -9,3 +9,12 @@ eureka:
 spring:
   application:
     name: zuul-depart
+
+#设置zuul路由规则
+zuul:
+  # 设置微服务名称的替换规则
+  routes:
+    # 指定被替换的微服务名称
+    somedepart.serviceId: consumner-depart
+    # 指定替换的路径
+    somedepart.path: /condep/**
